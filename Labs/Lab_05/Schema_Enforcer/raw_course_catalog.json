@@ -1,0 +1,82 @@
+[
+    {
+        "course_id": "DS2002",
+        "section": "001",
+        "title": "Data Science Systems",
+        "level": 200,
+        "instructors": [
+            {
+                "name": "Austin Rivera",
+                "role": "Primary"
+            },
+            {
+                "name": "Heywood Williams-Tracy",
+                "role": "TA"
+            }
+        ]
+    },
+    {
+        "course_id": "APMA3120",
+        "section": "001",
+        "title": "Statistics",
+        "level": 300,
+        "instructors": [
+            {
+                "name": "Jim Lark",
+                "role": "Primary"
+            }
+        ]
+    },
+    {
+        "course_id": "SYS3021",
+        "section": "001",
+        "title": "Deterministic Decision Models",
+        "level": 300,
+        "instructors": [
+            {
+                "name": "Robert Riggs",
+                "role": "Primary"
+            }
+        ]
+    },
+    {
+        "course_id": "SYS3023",
+        "section": "001",
+        "title": "Human Machine Interface",
+        "level": 300,
+        "instructors": [
+            {
+                "name": "Sara Riggs",
+                "role": "Primary"
+            }
+        ]
+    },
+    {
+        "course_id": "SYS3055",
+        "section": "001",
+        "title": "Systems Engineering Colloquium I",
+        "level": 300,
+        "instructors": [
+            {
+                "name": "Robert Riggs",
+                "role": "Primary"
+            }
+        ]
+    },
+    {
+        "course_id": "SYS3501",
+        "section": "001",
+        "title": "Programming for Information Engineering",
+        "level": 300,
+        "instructors": [
+            {
+                "name": "Laura Barnes",
+                "role": "Primary"
+            },
+            {
+                "name": "Matthew Bolton",
+                "role": "Primary"
+            }
+        ]
+    }
+]
