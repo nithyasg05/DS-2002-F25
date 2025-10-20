@@ -70,21 +70,21 @@ Create the following test files. The `base0.json` file should be placed in the `
       "id": "base0-1",
       "name": "Alakazam",
       "number": "1",
-      "set": { "id": "base1", "name": "Base Set" },
+      "set": { "id": "base0", "name": "Base Set" },
       "tcgplayer": { "prices": { "holofoil": { "market": 65.50 } } }
     },
     {
       "id": "base0-4",
       "name": "Charizard",
       "number": "4",
-      "set": { "id": "base1", "name": "Base Set" },
+      "set": { "id": "base0", "name": "Base Set" },
       "tcgplayer": { "prices": { "holofoil": { "market": 250.75 } } }
     },
     {
       "id": "base0-58",
       "name": "Pikachu",
       "number": "58",
-      "set": { "id": "base1", "name": "Base Set" },
+      "set": { "id": "base0", "name": "Base Set" },
       "tcgplayer": { "prices": { "normal": { "market": 5.15 } } }
     }
   ]
@@ -94,10 +94,10 @@ Create the following test files. The `base0.json` file should be placed in the `
 2.  `card_inventory_test/binder_0.csv` (Test Inventory Directory). This CSV file represents a small sample of your inventory.
 ```
 card_name,set_id,card_number,binder_name,page_number,slot_number
-Alakazam,base1,1,0,1,1
-Charizard,base1,4,0,2,8
-Pikachu,base1,58,0,3,4
-Pikachu,base1,58,0,3,5
+Alakazam,base0,1,0,1,1
+Charizard,base0,4,0,2,8
+Pikachu,base0,58,0,3,4
+Pikachu,base0,58,0,3,5
 ```
 
 3.  Real Inventory Files - within the Lab_4 assignment in Canvas, there should be two files to download. Download and place them into your Inventory Directory.
