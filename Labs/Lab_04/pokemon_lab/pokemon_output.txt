@@ -1,0 +1,176 @@
+Output after make Test
+
+--- Running Test Pipeline (Built-in Test Modes) ---
+# 1. Run the ETL (test mode)
+Starting Pokémon TCG Portfolio ETL Pipeline in Test Mode...
+Portfolio successfully updated: test_card_portfolio.csv
+# 2. Run the reporting (test mode)
+
+===== Portfolio Summary Report =====
+Total Portfolio Value: $0.00
+
+Most Valuable Card:
+  Name: NOT_FOUND
+Traceback (most recent call last):
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'card_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab/./generate_summary.py", line 53, in <module>
+    test()
+  File "/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab/./generate_summary.py", line 48, in test
+    generate_summary('test_card_portfolio.csv')
+  File "/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab/./generate_summary.py", line 36, in generate_summary
+    print(f"  ID: {most_valuable_card['card_id']}")
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/series.py", line 1130, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/series.py", line 1246, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'card_id'
+make: *** [Makefile:68: Test] Error 1
+
+
+Output after make Add_Set
+
+Fetching data for set ID: base1 base4 ...
+Data saved to card_set_lookup/base1 base4.json
+
+
+Output after make all
+
+--- Running Test Pipeline (Built-in Test Modes) ---
+# 1. Run the ETL (test mode)
+Starting Pokémon TCG Portfolio ETL Pipeline in Test Mode...
+Portfolio successfully updated: test_card_portfolio.csv
+# 2. Run the reporting (test mode)
+
+===== Portfolio Summary Report =====
+Total Portfolio Value: $0.00
+
+Most Valuable Card:
+  Name: NOT_FOUND
+Traceback (most recent call last):
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'card_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab/./generate_summary.py", line 53, in <module>
+    test()
+  File "/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab/./generate_summary.py", line 48, in test
+    generate_summary('test_card_portfolio.csv')
+  File "/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab/./generate_summary.py", line 36, in generate_summary
+    print(f"  ID: {most_valuable_card['card_id']}")
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/series.py", line 1130, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/series.py", line 1246, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'card_id'
+make: *** [Makefile:68: Test] Error 1
+@nithyasg05 ➜ .../DS-2002-F25/Labs/Lab_04/pokemon_lab (Lab_4) $ code pokemon_output.txt
+@nithyasg05 ➜ .../DS-2002-F25/Labs/Lab_04/pokemon_lab (Lab_4) $ make Add_set
+make: *** No rule to make target 'Add_set'.  Stop.
+@nithyasg05 ➜ .../DS-2002-F25/Labs/Lab_04/pokemon_lab (Lab_4) $ make Add_Set
+--- Adding New Card Set ---
+Enter the TCG Card Set ID (e.g., base1, base4): base1 base4
+Fetching data for set ID: base1 base4 ...
+Data saved to card_set_lookup/base1 base4.json
+@nithyasg05 ➜ .../DS-2002-F25/Labs/Lab_04/pokemon_lab (Lab_4) $ base1 base4
+bash: base1: command not found
+@nithyasg05 ➜ .../DS-2002-F25/Labs/Lab_04/pokemon_lab (Lab_4) $ make all
+--- Starting Portfolio Build Workflow ---
+Do you want to add a NEW card set? (yes/no)
+yes
+make[1]: Entering directory '/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab'
+--- Adding New Card Set ---
+Enter the TCG Card Set ID (e.g., base1, base4): base1 base4
+Fetching data for set ID: base1 base4 ...
+Data saved to card_set_lookup/base1 base4.json
+make[1]: Leaving directory '/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab'
+Card set added. Add another? (yes/no)
+yes
+make[1]: Entering directory '/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab'
+--- Adding New Card Set ---
+Enter the TCG Card Set ID (e.g., base1, base4): base4 
+Fetching data for set ID: base4 ...
+Data saved to card_set_lookup/base4.json
+make[1]: Leaving directory '/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab'
+Do you want to refresh ALL existing card sets? (yes/no)
+yes
+make[1]: Entering directory '/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab'
+--- Refreshing All Card Sets ---
+Refreshing all card sets in card_set_lookup/ ...
+Updating set: base1 ...
+Updated data written to card_set_lookup/base1.json
+Updating set: base4 ...
+Updated data written to card_set_lookup/base4.json
+All card sets have been refreshed
+make[1]: Leaving directory '/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab'
+--- Executing Full Production Pipeline ---
+--- Starting Production Pipeline ---
+>>> Step 1: Updating portfolio data...
+Portfolio successfully updated: card_portfolio.csv
+>>> Step 2: Generating summary report...
+
+===== Portfolio Summary Report =====
+Total Portfolio Value: $5,690.04
+
+Most Valuable Card:
+  Name: Charizard
+Traceback (most recent call last):
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'card_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab/./pipeline.py", line 27, in <module>
+    run_production_pipeline()
+  File "/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab/./pipeline.py", line 21, in run_production_pipeline
+    generate_summary.main()
+  File "/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab/generate_summary.py", line 43, in main
+    generate_summary('card_portfolio.csv')
+  File "/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab/generate_summary.py", line 36, in generate_summary
+    print(f"  ID: {most_valuable_card['card_id']}")
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/series.py", line 1130, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/series.py", line 1246, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'card_id'
+make: *** [Makefile:41: Portfolio_Build] Error 1
