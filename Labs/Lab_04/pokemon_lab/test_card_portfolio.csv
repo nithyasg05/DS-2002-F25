@@ -1,0 +1,5 @@
+index,binder_name,page_number,slot_number,card_name,card_number,set_id,set_name,card_market_value
+0-1-1,0,1,1,NOT_FOUND,1,base1,NOT_FOUND,0.0
+0-2-8,0,2,8,NOT_FOUND,4,base1,NOT_FOUND,0.0
+0-3-4,0,3,4,NOT_FOUND,58,base1,NOT_FOUND,0.0
+0-3-5,0,3,5,NOT_FOUND,58,base1,NOT_FOUND,0.0
